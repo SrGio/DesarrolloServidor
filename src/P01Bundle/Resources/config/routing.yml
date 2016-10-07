@@ -1,0 +1,11 @@
+p01_homepage:
+    path:     /
+    defaults: { _controller: P01Bundle:Default:index }
+
+p01_articulo:
+    path:     /articulo/{numero}
+    defaults: { _controller: P01Bundle:Default:art }
+
+p01_sin_articulo:
+    path:     /articulo/
+    defaults: { _controller: P01Bundle:Default:index }

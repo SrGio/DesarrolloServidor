@@ -1,0 +1,18 @@
+{% extends '::base.html.twig' %}
+{% block title %}Artículo {{numero}}{% endblock %}
+  {% block stylesheets %}
+    <link href="{{ asset('css/estilo.css') }}" rel="stylesheet" />
+  {% endblock %}
+
+
+{% block body %}
+    <h1>Artículo {{numero}}</h1>
+    <img src="{{imagen}}"/><div class="sinopsis">
+    {% if numero == 1 %}
+      Cinco años después de que la Costa Este de Estados Unidos fuera devastada en Sharknado 3, Fin, su familia y el universo han estado felizmente libres de sharnados en los años intermedios, pero ahora los tiburones (¡y tornados!) se están multiplicando en los lugares (y formas) más insospechados. Como los sharknado vuelven con más fuerza que nunca, Fin Shepard (Ian Ziering) necesitará la ayuda de algunos nuevos amigos en su incansable lucha para proteger el mundo de la amenaza sharknádica.
+    {% elseif numero == 2 %}
+      Como consecuencia de un impacto solar, la ciudad de Los Ángeles ha quedado infectada de un virus que ha convertido a todos los humanos en zombies sedientos de sangre, los únicos supervivientes, deben unir sus fuerzas para salir de Los Ángeles.
+    {% endif %}
+    </div>
+    <a class="boton" href="..">Volver</a>
+{% endblock %}
